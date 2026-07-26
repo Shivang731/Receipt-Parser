@@ -43,3 +43,11 @@ GEMINI_API_KEY=your-key-here
 Copy `.env.example` to `.env` and fill in your key. Run `npm run dev` from the project root.
 
 **Known gaps (by design, not oversight):** discounts aren't extracted or modeled; only JPG/PNG are accepted (no HEIC); no authentication or deployment config, per spec.
+
+## Screenshots
+
+**Successful extraction:**
+![Working extraction](Screenshots/Working.png)
+
+**Low-confidence extraction (blurry photo):**
+![Blurry receipt handling](Screenshots/Blur.png)
