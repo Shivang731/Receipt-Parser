@@ -36,13 +36,20 @@ The first way is that the spec treats correction as the fundamental interaction�
 
 The second is that the spec asks about "how do you handle low-confidence extractions?" as if field-level confidence is somehow produced by the model. Gemini produces structured JSON output without any confidence measure attached to fields. What I implemented—a very naive arithmetic diff against the expected value—is not actually the confidence measure but a proxy for it.
 ## Setup
-
+ 
 ```
 GEMINI_API_KEY=your-key-here
 ```
-Copy `.env.example` to `.env` and fill in your key. Run `npm run dev` from the project root.
-
-**Known gaps (by design, not oversight):** discounts aren't extracted or modeled; only JPG/PNG are accepted (no HEIC); no authentication or deployment config, per spec.
+Copy `.env.example` to `.env` and fill in your key.
+ 
+Install dependencies (root, server, and client each have their own `package.json`):
+```bash
+npm install
+npm install --prefix server
+npm install --prefix client
+```
+ 
+Then run `npm run dev` from the project root.
 
 ## Screenshots
 
